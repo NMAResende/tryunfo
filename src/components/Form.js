@@ -21,7 +21,7 @@ class Form extends React.Component {
     return (
       <form>
         <label htmlFor="cardName">
-          Nome da carta
+          Nome do país
           <input
             type="text"
             id="cardName"
@@ -32,7 +32,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardDescription">
-          Descrição da carta
+          Descrição do país
           <textarea
             id="cardDescription"
             name="cardDescription"
@@ -42,6 +42,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardAttr1">
+          Área (km2)
           <input
             type="number"
             id="cardAttr1"
@@ -52,6 +53,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardAttr2">
+          População (milhões)
           <input
             type="number"
             id="cardAttr2"
@@ -62,6 +64,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardAttr3">
+          Renda per capita (U$$)
           <input
             type="number"
             id="cardAttr3"
@@ -72,7 +75,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardImage">
-          Imagem da carta
+          Imagem do país
           <input
             type="text"
             id="cardImage"
@@ -83,7 +86,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardRare">
-          Raridade da carta
+          Raridade do país
           <select
             id="cardRare"
             name="cardRare"
