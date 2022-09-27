@@ -11,12 +11,48 @@ class App extends React.Component {
       cardAttr1: '0',
       cardAttr2: '0',
       cardAttr3: '0',
+      cardImage: '',
       cardRare: 'normal',
       cardTrunfo: false,
       isSaveButtonDisabled: true,
       saveCards: [],
     };
   }
+
+  handleClearButtun = () => {
+    this.setState({
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardImage: '',
+      cardRare: 'normal',
+    });
+  };
+
+  onSaveButtonClick = (e) => {
+    e.preventDefault();
+    const {
+      cardName,
+      cardDescription,
+      cardImage,
+      cardRare,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+    } = this.state;
+    const newCard = { cardName,
+      cardDescription,
+      cardImage,
+      cardRare,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+    };
+    this.setState((prev) => ({ saveCards: [...prev.saveCards, newCard] }));
+    this.handleClearButtun();
+  };
 
   handleInputs = () => {
     const { cardName, cardDescription, cardImage, cardRare } = this.state;
@@ -61,28 +97,6 @@ class App extends React.Component {
     }, () => this.isSaveButton());
   };
 
-  onSaveButtonClick = (e) => {
-    e.preventDefault();
-    const {
-      cardName,
-      cardDescription,
-      cardImage,
-      cardRare,
-      cardAttr1,
-      cardAttr2,
-      cardAttr3,
-    } = this.state;
-    const newCard = { cardName,
-      cardDescription,
-      cardImage,
-      cardRare,
-      cardAttr1,
-      cardAttr2,
-      cardAttr3,
-    };
-    this.setState((prev) => ({ saveCards: [...prev.saveCards, newCard] }));
-  };
-
   render() {
     const {
       cardName,
@@ -90,6 +104,7 @@ class App extends React.Component {
       cardAttr1,
       cardAttr2,
       cardAttr3,
+      cardImage,
       cardRare,
       cardTrunfo,
       isSaveButtonDisabled,
@@ -106,6 +121,7 @@ class App extends React.Component {
           cardAttr1={ cardAttr1 }
           cardAttr2={ cardAttr2 }
           cardAttr3={ cardAttr3 }
+          cardImage={ cardImage }
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
           isSaveButtonDisabled={ isSaveButtonDisabled }
