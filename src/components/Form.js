@@ -21,7 +21,7 @@ class Form extends React.Component {
     return (
       <form>
         <label htmlFor="cardName">
-          Nome do país
+          Nome do personagem
           <input
             type="text"
             id="cardName"
@@ -32,7 +32,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardDescription">
-          Descrição do país
+          Descrição do personagem
           <textarea
             id="cardDescription"
             name="cardDescription"
@@ -42,7 +42,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardAttr1">
-          Área (km2)
+          Humor
           <input
             type="number"
             id="cardAttr1"
@@ -53,7 +53,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardAttr2">
-          População (milhões)
+          Esperteza
           <input
             type="number"
             id="cardAttr2"
@@ -64,7 +64,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardAttr3">
-          Renda per capita (U$$)
+          Hall da fama
           <input
             type="number"
             id="cardAttr3"
@@ -75,7 +75,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardImage">
-          Imagem do país
+          Imagem do personagem
           <input
             type="text"
             id="cardImage"
@@ -86,7 +86,7 @@ class Form extends React.Component {
           />
         </label>
         <label htmlFor="cardRare">
-          Raridade do país
+          Raridade do personagem
           <select
             id="cardRare"
             name="cardRare"
@@ -118,7 +118,6 @@ class Form extends React.Component {
           data-testid="save-button"
         >
           Salvar
-
         </button>
       </form>
     );
