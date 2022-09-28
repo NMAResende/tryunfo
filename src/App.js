@@ -41,6 +41,17 @@ class App extends React.Component {
     });
   };
 
+  // Graças ao João e Sumo na mentoria
+  handleDelete = (item) => {
+    // e.preventDefault();
+    const { saveCards, hasTrunfo } = this.state;
+    // const { cardName } = e.target;
+    const delet = saveCards.filter((card) => card.cardName !== item);
+    this.setState({
+      saveCards: delet,
+      hasTrunfo: !hasTrunfo });
+  };
+
   onSaveButtonClick = (e) => {
     e.preventDefault();
     const {
@@ -159,17 +170,29 @@ class App extends React.Component {
         {/* Graças ao Tiago na mentoria */}
         <div>
           {saveCards.map((cardList, index) => (
-            <Card
-              key={ index }
-              cardName={ cardList.cardName }
-              cardDescription={ cardList.cardDescription }
-              cardAttr1={ cardList.cardAttr1 }
-              cardAttr2={ cardList.cardAttr2 }
-              cardAttr3={ cardList.cardAttr3 }
-              cardImage={ cardList.cardImage }
-              cardRare={ cardList.cardRare }
-              cardTrunfo={ cardList.cardTrunfo }
-            />))}
+            <div key={ index }>
+              <Card
+                key={ index }
+                cardName={ cardList.cardName }
+                cardDescription={ cardList.cardDescription }
+                cardAttr1={ cardList.cardAttr1 }
+                cardAttr2={ cardList.cardAttr2 }
+                cardAttr3={ cardList.cardAttr3 }
+                cardImage={ cardList.cardImage }
+                cardRare={ cardList.cardRare }
+                cardTrunfo={ cardList.cardTrunfo }
+                handleDelete={ this.handleDelete }
+              />
+              <button
+                key={ `button ${cardList.cardName}` }
+                onClick={ () => this.handleDelete(cardList.cardName) }
+                type="button"
+                data-testid="delete-button"
+              >
+                Excluir
+              </button>
+            </div>
+          ))}
         </div>
       </div>
     );
