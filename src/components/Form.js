@@ -20,10 +20,12 @@ class Form extends React.Component {
 
     return (
       <form>
-        <label htmlFor="cardName">
+        <h3>Adicione uma carta</h3>
+        <label htmlFor="cardName" className="name">
           Nome do personagem
           <input
             type="text"
+            className="cardName"
             id="cardName"
             name="cardName"
             data-testid="name-input"
@@ -31,65 +33,71 @@ class Form extends React.Component {
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="cardDescription">
+        <label htmlFor="cardDescription" className="description">
           Descrição do personagem
           <textarea
             id="cardDescription"
             name="cardDescription"
+            className="cardDescription"
             data-testid="description-input"
             value={ cardDescription }
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="cardAttr1">
+        <label htmlFor="cardAttr1" className="at1">
           Humor
           <input
             type="number"
             id="cardAttr1"
             name="cardAttr1"
+            className="cardAttr1"
             data-testid="attr1-input"
             value={ cardAttr1 }
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="cardAttr2">
+        <label htmlFor="cardAttr2" className="at2">
           Esperteza
           <input
             type="number"
             id="cardAttr2"
             name="cardAttr2"
+            className="cardAttr2"
             data-testid="attr2-input"
             value={ cardAttr2 }
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="cardAttr3">
+        <label htmlFor="cardAttr3" className="at3">
           Hall da fama
           <input
             type="number"
             id="cardAttr3"
             name="cardAttr3"
+            className="cardAttr3"
             data-testid="attr3-input"
             value={ cardAttr3 }
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="cardImage">
+        <label htmlFor="cardImage" className="image">
           Imagem do personagem
           <input
             type="text"
             id="cardImage"
             name="cardImage"
+            className="cardImage"
             data-testid="image-input"
             value={ cardImage }
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="cardRare">
+        <label htmlFor="cardRare" className="rare">
           Raridade do personagem
           <select
             id="cardRare"
             name="cardRare"
+            className="cardRare"
             type="select"
             data-testid="rare-input"
             value={ cardRare }
@@ -100,13 +108,14 @@ class Form extends React.Component {
             <option value="muito raro">Muito Raro</option>
           </select>
         </label>
-        <label htmlFor="cardTrunfo">
+        <label htmlFor="cardTrunfo" className="trunfo">
           {/* Referência: https://pt-br.reactjs.org/docs/conditional-rendering.html */}
           { !hasTrunfo
             ? (
               <input
                 id="cardTrunfo"
                 name="cardTrunfo"
+                className="cardTrunfo"
                 type="checkbox"
                 data-testid="trunfo-input"
                 checked={ cardTrunfo }

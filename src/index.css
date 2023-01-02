@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  background-image: url('https://guarulhosonline.com.br/wp-content/uploads/2020/08/SABESP-E-TURMA-DA-M%C3%94NICA-guarulhosonline.jpg');
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -8,6 +8,161 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',
+    'monospace';
+}
+
+h1 {
+  color: darkred;
+  text-align: center;
+  text-shadow: 0.1em 0.1em 0.2em white;
+}
+
+form {
+  background-color: bisque;
+  border: 2px white solid;
+  display: inline-block;
+  font-size: 18px;
+  height: 600px;
+  margin-left: 40px;
+  opacity: 0.9;
+  padding: 20px;
+  text-shadow: 0.1em 0.1em 0.2em darkred;
+  width: 500px;
+}
+
+h3 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.name {
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+.cardName {
+  box-shadow: inset 4px -3px 4px rgba(0, 0, 0, 0.5);
+  height: 2px;
+  margin: 20px;
+  padding: 15px;
+  width: 60%;
+}
+
+.description {
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+.cardDescription {
+  box-shadow: inset 4px -3px 4px rgba(0, 0, 0, 0.5);
+  height: 40px;
+  margin: 20px;
+  padding: 15px;
+  width: 80%;
+}
+
+.at1 {
+  margin-bottom: 4px;
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+.cardAttr1 {
+  margin-bottom: 4px;
+  margin-left: 8px;
+  margin-right: 300px;
+  width: 30px;
+}
+
+.at2 {
+  margin-bottom: 4px;
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+.cardAttr2 {
+  margin-bottom: 4px;
+  margin-left: 8px;
+  margin-right: 300px;
+  width: 30px;
+}
+
+.at3 {
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+.cardAttr3 {
+  margin-bottom: 20px;
+  margin-left: 8px;
+  margin-right: 260px;
+  width: 30px;
+}
+
+.image {
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+.cardImage {
+  box-shadow: inset 4px -3px 4px rgba(0, 0, 0, 0.5);
+  height: 2px;
+  margin: 20px;
+  padding: 15px;
+  width: 80%;
+}
+
+.rare {
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+.cardRare {
+  margin-left: 8px;
+  margin-right: 145px;
+  width: 70px;
+}
+
+.trunfo {
+  color: darkblue;
+  font-weight: 600;
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+.cardTrunfo {
+  margin: 15px;
+  margin-left: 10px;
+}
+
+button {
+  background-color: darkred;
+  border-color: white;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  height: 30px;
+  margin-left: 390px;
+  margin-top: 5px;
+  width: 80px;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.5;
+}
+
+.cardSalva {
+  background-color: bisque;
+  border: 2px white solid;
+  font-size: 18px;
+  height: 600px;
+  margin-left: 800px;
+  margin-top: -645px;
+  opacity: 0.9;
+  padding: 20px;
+  text-shadow: 0.1em 0.1em 0.2em darkred;
+  width: 500px;
 }
